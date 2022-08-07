@@ -50,7 +50,7 @@
 //     return arr
 // }
 
-alternate solution
+//alternate solution
 function rotateLeft(d, arr) {
 let res = arr.slice(d).concat(arr.slice(0,d));
 return res
