@@ -36,18 +36,24 @@
 
 
 
-function rotateLeft(d, arr) {
-    arr = arr.map(n => {
-      return  n + d
-    })
-    for(i=0; i<arr.length;i++){
-        if(arr[i] > arr.length){
-            let x = arr[i] - arr.length
-            arr[i] = 0 + x
-        }
-    }
+// function rotateLeft(d, arr) {
+//     arr = arr.map(n => {
+//       return  n + d
+//     })
+//     for(i=0; i<arr.length;i++){
+//         if(arr[i] > arr.length){
+//             let x = arr[i] - arr.length
+//             arr[i] = 0 + x
+//         }
+//     }
 
-    return arr
+//     return arr
+// }
+
+alternate solution
+function rotateLeft(d, arr) {
+let res = arr.slice(d).concat(arr.slice(0,d));
+return res
 }
 
 console.log(rotateLeft(2, [1,2,3,4,5]))
