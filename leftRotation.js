@@ -33,3 +33,23 @@
 // Explanation
 
 // To perform  left rotations, the array undergoes the following sequence of changes:
+
+
+
+function rotateLeft(d, arr) {
+    arr = arr.map(n => {
+      return  n + d
+    })
+    for(i=0; i<arr.length;i++){
+        if(arr[i] > arr.length){
+            let x = arr[i] - arr.length
+            arr[i] = 0 + x
+        }
+    }
+
+    return arr
+}
+
+console.log(rotateLeft(2, [1,2,3,4,5]))
+console.log(rotateLeft(5, [1,2,3,4,5]))
+console.log(rotateLeft(3, [1,2,3,4,5]))
