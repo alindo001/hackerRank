@@ -26,10 +26,20 @@
 // 3,142,791
 
 
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
- var containsDuplicate = function(nums) {
-    
+var containsDuplicate = function(nums) {
+    let call
+    nums = nums.sort()
+    nums = nums.forEach((n,i) => {
+        if(n[i] == n[i-1])
+            call = 1
+    })
+    if(call === 1){
+        return true
+    }else{
+        return false
+
+    }
 };
+
+console.log(containsDuplicate([1,2,3,1]))
+console.log(containsDuplicate([1,2,3,4]))
