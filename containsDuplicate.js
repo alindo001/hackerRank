@@ -27,17 +27,17 @@
 
 
 var containsDuplicate = function(nums) {
-    let call
+    let call = 0
     nums = nums.sort()
-    nums = nums.forEach((n,i) => {
-        if(n[i] == n[i-1])
+    for(i = 0; i<= nums.length; i++){
+        if(nums[i]===nums[i-1]){
             call = 1
-    })
-    if(call === 1){
+        }
+    }
+    if (call === 1){
         return true
-    }else{
+    }else {
         return false
-
     }
 };
 
